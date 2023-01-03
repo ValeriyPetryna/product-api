@@ -32,11 +32,12 @@ $ npm run db:init
 ```
 
 ## Links:
+
 ### Running the app by default:
+> All endpoints described in Swagger API Documentation:
 [App link](https://localhost:3000)
 
 ### All endpoints described in Swagger API Documentation:
-[Swagger documentation link](https://localhost:3000/api)
 
 
 ## Test
