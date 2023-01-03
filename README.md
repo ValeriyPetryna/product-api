@@ -26,9 +26,14 @@ Build docker images and run containers:
 $ docker-compose up --build -d
 ```
 
-Run database initialization script:
+Run database initialization script after docker containers were started:
 ```bash
 $ npm run db:init
+```
+> or create database in container and run migrations and seeds manually:
+
+```bash
+$ docker exec -it api sh -c "npm i sequelize-cli ; npx sequelize-cli db:migrate ; npx sequelize-cli db:seed:all"
 ```
 
 ## Links:
