@@ -19,7 +19,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new SequelizeUniqueConstraintInterceptor());
 
   const document = SwaggerModule.createDocument(app, swaggerConfig);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('', app, document);
 
   await app.listen(APP_PORT, () =>
     logger.log(`Server started on port: ${APP_PORT}`),
