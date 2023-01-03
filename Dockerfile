@@ -1,4 +1,4 @@
-FROM node:16.14.2-buster As build
+FROM node:18-alpine As build
 
 WORKDIR /usr/src/app
 
@@ -8,7 +8,7 @@ RUN npm install
 
 RUN npm run build
 
-FROM node:16.14.2-buster
+FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
@@ -17,5 +17,4 @@ COPY --from=build /usr/src/app/package*.json ./
 
 RUN npm ci --omit=dev
 
-# CMD ["node", "dist/main"]
-CMD ["npm", "run", "start"]
+CMD ["node", "dist/main"]
