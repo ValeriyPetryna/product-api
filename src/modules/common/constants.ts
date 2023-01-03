@@ -1,0 +1,2 @@
+export const MONTH_DIFFERENCE_FOR_DISCOUNT = 1;
+export const DISCOUNT_VALUE = 20;
